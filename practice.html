@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num1=12, num2=10,x=15,y=12,z, result;
+          let bool=true;
+          const person = {
+            firstname:"prajakta",
+            lastname:"mokashi",
+            age:22,
+            eyecolor:"black"
+          };
+          const q1 = ["Jan", "Feb", "Mar","Apr", "May", "Jun"];
+          const q2 = ["Jul", "Aug", "Sep","Oct", "Nov", "May"];
+          const year = [...q1, ...q2,];
+        //Arithmetic Operators
+        result = num1 + num2;
+        document.write("Add = " + result + "<br/>");
+        result = num1 - num2;
+        document.write("Subtract = " + result + "<br/>");
+        result = num1 * num2;
+        document.write("Multiply = " + result + "<br/>");
+        result = num1/num2;
+        document.write("Divide = " + result + "<br/>");
+        result = num1**num2;
+        document.write("Exponentiation= " + result + "<br/>");
+        result = num1%num2;
+        document.write("modulus = " + result + "<br/>");
+        result =  ++num1;
+        document.write("increment = " + result + "<br/>");
+        result = --num2;
+        document.write("decrement = " + result + "<br/>");
+        //comparison Operators
+        result = num1==num2;
+        document.write("are numbers equal= " + result + "<br/>");
+        result = num1===num2;
+        document.write("are numbers equal and of same data type= " + result + "<br/>");
+        result = num1!=num2;
+        document.write("are numbers  not equal= " + result + "<br/>");
+        result = num1!=num2;
+        document.write("are numbers  not equal and not of same type= " + result + "<br/>");
+        result = num1>num2;
+        document.write("num1 is greater than num2= " + result + "<br/>");
+        result = num1<num2;
+        document.write("num1 is less than num2= " + result + "<br/>");
+        result = num1>=num2;
+        document.write("num1 is greater than equal to num2= " + result + "<br/>");
+        result = num1<=num2;
+        document.write("num1 is less than equal to num2= " + result + "<br/>");
+        //assignment operators
+        result = x=y;
+        document.write("after assigning value to x its current value is= " + result + "<br/>");
+        result = x+=y;
+        document.write("result after adding num1 in num2= " + result + "<br/>");
+        result = x-=y;
+        document.write("result after subtracting num2 from num1= " + result + "<br/>");
+        //logical Operators
+        result = (x < 10 && y > 1);
+        document.write("result of using and condition= " + result + "<br/>");
+        result = (x < 10 || y > 10);
+        document.write("result of using or condition= " + result + "<br/>");
+        result = !(x === y);
+        document.write("result of using not condition= " + result + "<br/>");
+        //bitwise operators
+        result = z=5 & 1 ;
+        document.write("result of and bitwise operator= " + result + "<br/>");
+        result = z= 5 | 1 ;
+        document.write("result of or bitwise operator= " + result + "<br/>");
+        result = z = ~ 5 ;
+        document.write("result of not bitwise operator= " + result + "<br/>");
+        result = z = 5 ^ 1 ;
+        document.write("result of XOR bitwise operator= " + result + "<br/>");
+        result = z = 5 << 1 ;
+        document.write("result of left shift bitwise operator= " + result + "<br/>");
+        result = z = 5 >> 1 ;
+        document.write("result of right shift bitwise operator= " + result + "<br/>");
+        result = z = 5 >>> 1	 ;
+        document.write("result of right shift bitwise operator= " + result + "<br/>");
+        //type of operator
+        document.write("type of z= " + typeof z + "<br/>"+"type of x ="+typeof x+"<br/>"+"type of bool ="+typeof bool+"<br/>");
+        //delete operator
+        delete person.age;
+        document.write(person.firstname + " is " + person.age + " years old."+"<br/>");
+        //spread operator
+        document.write(year);
+        
+
+
+
+       
+    
+
+
+      </script>
+</body>
+</html>

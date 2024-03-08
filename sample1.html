@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log("1");
+      setTimeout(() => {
+        console.log("2");
+      }, 3000);
+      console.log("3");
+      var arr = [2, 4, 8, 10];
+      var updatedArr = arr.map((val) => val + 2);
+      console.log(arr);
+      console.log(updatedArr);
+      function generateIntro(name) {
+        return `Hi, my name is ${name}`
+      }
+      
+      const dillion = generateIntro("Dillion")
+      console.log(dillion)
+    </script>
+  </body>
+</html>

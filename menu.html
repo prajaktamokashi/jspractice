@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu-Driven Program</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Menu-Driven Program</h1>
+    <div id="menu">
+        <button onclick="Prime()">1. Check if a number is Prime</button>
+        <button onclick="Number()">2. Check if a number is Positive, Negative, or Zero</button>
+        <button onclick="Table()">3. Display Table of a Number</button>
+    </div>
+
+    <div id="output"></div>
+
+    <script>
+        function Prime() {
+            var number = parseInt(prompt('Enter a number:'));
+            var isPrime = true;
+            if (number <= 1) {
+                isPrime = false;
+            } else {
+                for (var i = 2; i <= Math.sqrt(number); i++) {
+                    if (number % i === 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+            }
+            document.getElementById('output').innerHTML = isPrime ? number + ' is a prime number.' : number + ' is not a prime number.';
+        }
+
+        function Number() {
+            var number = parseFloat(prompt('Enter a number:'));
+            if (number > 0) {
+                document.getElementById('output').innerHTML = number + ' is a positive number.';
+            } else if (number < 0) {
+                document.getElementById('output').innerHTML = number + ' is a negative number.';
+            } else {
+                document.getElementById('output').innerHTML = 'The number is zero.';
+            }
+        }
+
+        function Table() {
+            var number = parseInt(prompt('Enter a number to display its table:'));
+            var tableContent = '<h2>Table of ' + number + '</h2><table>';
+            for (var i = 1; i <= 10; i++) {
+                tableContent += number + ' * '+ i +"="+ (number * i);
+                document.write("<br/>")
+            }
+            tableContent += '</table>';
+            document.getElementById('output').innerHTML = tableContent;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+          background-color: #FFF3C7;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            color:rgb(0, 0, 0);
+        }
+        button{
+            background-color: #857eaf;
+            margin-bottom: 1%;
+            color: rgb(0, 0, 0);
+            padding: 10px 10px 10px 10px;
+
+        }
+        p{
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 900;
+            color: black;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Area Calculator</h1>
+    <button onclick="Circle()">Calculate Area Of Circle</button><br />
+    <button onclick="Triangle()">Calculate Area Of Triangle</button><br />
+    <button onclick="Square()">Calculate Area Of Square</button><br />
+    <button onclick="Rectangle()">Calculate Area Of Rectangle</button><br />
+    <button onclick="equiTriangle()">Calculate Area Of Equilateral Triangle</button><br />
+    <button onclick="Parallelogram()">Calculate Area Of Parallelogram</button><br />
+    <button onclick="Rhombus()">Calculate Area Of Rhombus</button><br /><br />
+
+    <p id="result"></p>
+    <script>
+      function Circle() {
+        var radius = parseFloat(prompt("Enter the radius of the circle:"));
+        var area = 3.142 * radius * radius;
+        displayResult(area);
+      }
+
+      function Triangle() {
+        var base = parseFloat(prompt("Enter the base of the triangle:"));
+        var height = parseFloat(prompt("Enter the height of the triangle:"));
+        var area = 0.5 * base * height;
+        displayResult(area);
+      }
+
+      function Square() {
+        var side = parseFloat(
+          prompt("Enter the length of the side of the square:")
+        );
+        var area = side * side;
+        displayResult(area);
+      }
+
+      function Rectangle() {
+        var length = parseFloat(prompt("Enter the length of the rectangle:"));
+        var bredth = parseFloat(prompt("Enter the bredth of the rectangle:"));
+        var area = length * bredth;
+        displayResult(area);
+      }
+      function equiTriangle() {
+        var side1 = parseFloat(prompt("Enter the side of the equilateral triangle:"));
+        var area = 0.433 * side1 * side1;
+        displayResult(area);
+      }
+      function Parallelogram() {
+        var base = parseFloat(prompt("Enter the base of the Parallelogram :"));
+        var height = parseFloat(prompt("Enter the height of the Parallelogram:"));
+        var area = base * height;
+        displayResult(area);
+      }
+      function Rhombus() {
+        var d1 = parseFloat(prompt("Enter the first diagonal of rhombus:"));
+        var d2 = parseFloat(prompt("Enter the second diagonal of rhombus:"));
+        var area = 0.5 * d1 * d2;
+        displayResult(area);
+      }
+
+      function displayResult(area) {
+        var output = document.getElementById("result");
+        result.innerHTML = "The area is: " + area;
+      }
+    </script>
+  </body>
+</html>

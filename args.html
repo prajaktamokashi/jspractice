@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function findMax() {
+          let max=0;
+          for(let i = 0; i < arguments.length; i++) {
+            if (arguments[i] > max) {
+              max = arguments[i];
+            }
+          }
+          return max;
+        } 
+        let max = findMax(453, 555, 800,90,51);
+        document.write("the maximum number is"+ " " + max);
+        </script>
+</body>
+</html>

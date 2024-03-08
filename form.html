@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu-Driven Program</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h2>Menu-Driven Program</h2>
+    <form id="menuForm">
+        <label>
+            <input type="radio" name="option" value="option1" checked>
+            Option 1
+        </label><br>
+        <label>
+            <input type="radio" name="option" value="option2">
+            Option 2
+        </label><br>
+        <label>
+            <input type="radio" name="option" value="option3">
+            Option 3
+        </label><br><br>
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        function submitForm() {
+            var form = document.getElementById("menuForm");
+            var selectedOption = form.querySelector('input[name="option"]:checked').value;
+
+            // Process the selected option
+            switch (selectedOption) {
+                case "option1":
+                    document.getElementById("output").innerText = "Option 1 selected";
+                    break;
+                case "option2":
+                    document.getElementById("output").innerText = "Option 2 selected";
+                    break;
+                case "option3":
+                    document.getElementById("output").innerText = "Option 3 selected";
+                    break;
+                default:
+                    document.getElementById("output").innerText = "Invalid option";
+            }
+        }
+    </script>
+</body>
+</html>

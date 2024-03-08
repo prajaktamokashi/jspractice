@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+      let text = "";
+      let txt = "";
+      const person = {
+        fname: "Prajakta",
+        lname: "Mokashi",
+        age: 22,
+        height: 168,
+      };
+      const obj = { a: 1, b: 4, c: 7 };
+      const names = [
+        "Prajakta",
+        "Suraj",
+        "Trisandhya",
+        "Srushti",
+        "Shiva",
+        "Dhananjay",
+      ];
+
+      for (let x in person) {
+        txt = txt + person[x] + " ";
+      }
+
+      for (let prop in obj) {
+        document.write(prop + ": " + obj[prop] + " ");
+      }
+
+      for (let p of names) {
+        text += p + "<br>";
+      }
+      document.getElementById("demo").innerHTML = txt;
+      document.getElementById("demo1").innerHTML = text;
+    </script>
+  </body>
+</html>

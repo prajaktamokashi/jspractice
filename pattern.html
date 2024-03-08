@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let ch;
+      let n = 10;
+      let string = "";
+      ch = parseInt(
+        prompt(
+          "Enter your pattern of your choice:",
+          "1.square 2.right traingle 3.downward inverted triangle 4.Number traingle"
+        )
+      );
+      if (ch > 1 && ch <= 4) {
+        switch (ch) {
+          default:
+            document.write("You have entered a invalid choice");
+          case 1:
+            for (let i = 0; i < n; i++) {
+              for (let j = 0; j < n; j++) {
+                string += "*";
+              }
+              string += "<br>";
+            }
+            document.write(string);
+            break;
+          case 2:
+            for (let i = 1; i <= n; i++) {
+              for (let j = 0; j < n - i; j++) {
+                string += " ";
+              }
+              for (let k = 0; k < i; k++) {
+                string += "*";
+              }
+              string += "<br>";
+            }
+            document.write(string);
+            break;
+          case 3:
+            for (let i = 0; i < n; i++) {
+              for (let k = 0; k < n - i; k++) {
+                string += "*";
+              }
+              string += "<br>";
+            }
+            document.write(string);
+            break;
+          case 4:
+            for (let i = 1; i <= n; i++) {
+              for (let j = 1; j <= i; j++) {
+                string += j;
+              }
+              string += "<br>";
+            }
+            document.write(string);
+            break;
+            7;
+        }
+      } else {
+        document.write("You have entered a invalid choice");
+      }
+    </script>
+  </body>
+</html>
