@@ -56,17 +56,6 @@
                 document.getElementById('output').innerHTML = 'The number is zero.';
             }
         }
-
-        function Table() {
-            var number = parseInt(prompt('Enter a number to display its table:'));
-            var tableContent = '<h2>Table of ' + number + '</h2><table>';
-            for (var i = 1; i <= 10; i++) {
-                tableContent += number + ' * '+ i +"="+ (number * i);
-                document.write("<br/>")
-            }
-            tableContent += '</table>';
-            document.getElementById('output').innerHTML = tableContent;
-        }
     </script>
 </body>
 </html>

@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USD to INR Converter</title>
+</head>
+<body>
+    <h2>USD to INR Converter</h2>
+    <label for="usdAmount">Amount in USD:</label>
+    <input type="number" id="usdAmount" placeholder="Enter amount">
+    <br>
+    <button onclick="convert()">Convert</button>
+    <div id="result"></div>
+
+    <script>
+        function convert() {
+            var usdAmount = document.getElementById('usdAmount').value;
+            var inrRate = 82.74;
+
+            var inrAmount = usdAmount * inrRate;
+
+            document.getElementById('result').innerHTML = `${usdAmount} USD = ${inrAmount} INR`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block Scope Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      h1{
+        color: rgb(124, 124, 197);
+        font-size: 30px;
+      }
+      #output {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+      }
+      #output1 {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #fa6161;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Scope Example</h1>
+    <div id="output">Output:</div>
+    <div id="output1">Output:</div>
+
+    <script>
+      var globalVar = "I am global"; //this is my global variable
+      //block scope
+      {
+        // Accessing global scope variable
+        document.getElementById("output").innerText += "\n" + globalVar;
+        //block scope var1
+        let Var1 = "I am block scoped 1";
+        document.getElementById("output").innerText += "\n" + Var1;
+        //block scope var2
+        let Var2 = "I am block scoped 2";
+        document.getElementById("output").innerText += "\n" + Var2;
+      } 
+      //function scope
+      function functionScope() {
+        // Function scope variable
+        var functionVar = "I am function scoped";
+        document.getElementById("output1").innerText += "\n" + functionVar;
+
+        // Inner function
+        function innerFunction() {
+          //inner function variable
+          var innerVar = "I am inner function scoped";
+          document.getElementById("output1").innerText += "\n" + innerVar;
+        }
+        // Attempting to access innerVar here
+        innerFunction();
+        // Accessing global scope variable inside function
+        document.getElementById("output1").innerText += "\n" + globalVar;
+      }
+
+      // Accessing global scope variable
+      document.getElementById("output1").innerText += "\n" + globalVar;
+      //Accessing funtionVar and innerVar
+      functionScope();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #counter {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Counter App</h1>
+    <div id="counter">0</div>
+    <button id="incrementBtn">Increment</button>
+    <button id="decrementBtn">Decrement</button>
+
+    <script>
+        // Define the counter module using closure
+        const counterModule = (function() {
+            // Private variable to store the counter value
+            let counterValue = 0;
+
+            // Private function to update the counter display
+            function updateCounterDisplay() {
+                document.getElementById('counter').innerText = counterValue;
+            }
+
+            // Public methods exposed via closure
+            return {
+                increment: function() {
+                    counterValue++;
+                    updateCounterDisplay();
+                },
+                decrement: function() {
+                    if (counterValue > 0) {
+                        counterValue--;
+                        updateCounterDisplay();
+                    }
+                },
+                getCurrentValue: function() {
+                    return counterValue;
+                }
+            };
+        })();
+
+        // Event listeners for buttons
+        document.getElementById('incrementBtn').addEventListener('click', function() {
+            counterModule.increment();
+        });
+
+        document.getElementById('decrementBtn').addEventListener('click', function() {
+            counterModule.decrement();
+        });
+
+        // Initialize counter display
+        counterModule.getCurrentValue();
+
+    </script>
+</body>
+</html>
