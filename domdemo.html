@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Properties and Methods</title>
+    <style>
+        *{
+            background-color: rgb(200, 200, 241);
+        }
+        h1{font-size: 40px;
+        color: black;}
+        #output{
+            font-size: 20px;
+        }
+        button{
+            height: 50px;
+            width:200px;
+            text-align: center;
+        }
+        #title{
+            font-size: 40px;
+            color:rgb(25, 25, 80);
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>DOM Methods And Properties</h1>
+    <button onclick="display()">Display Document Info</button>
+    <p id="title"></p>
+    <p id="output"></p>
+    <script>
+        function display() {
+            var out = document.getElementById("output");
+            var t = document.getElementById("title");
+
+    t.innerHTML += "Document Properties and Methods:<br>";
+    out.innerHTML += "document.baseURI: " + document.baseURI + "<br>";
+    out.innerHTML += "document.body: " + document.body + "<br>";
+    out.innerHTML += "document.cookie: " + document.cookie + "<br>";
+    out.innerHTML += "document.doctype: " + document.doctype + "<br>";
+    out.innerHTML += "document.documentElement: " + document.documentElement + "<br>";
+    out.innerHTML += "document.documentMode: " + document.documentMode + "<br>";
+    out.innerHTML += "document.documentURI: " + document.documentURI + "<br>";
+    out.innerHTML += "document.domain: " + document.domain + "<br>";
+    out.innerHTML += "document.forms: " + document.forms + "<br>";
+    out.innerHTML += "document.head: " + document.head + "<br>";
+    out.innerHTML += "document.images: " + document.images + "<br>";
+    out.innerHTML += "document.lastModified: " + document.lastModified + "<br>";
+    out.innerHTML += "document.links: " + document.links + "<br>";
+    out.innerHTML += "document.referrer: " + document.referrer + "<br>";
+    out.innerHTML += "document.scripts: " + document.scripts + "<br>";
+    out.innerHTML += "document.title: " + document.title + "<br>";
+    out.innerHTML += "document.URL: " + document.URL + "<br>";
+    out.innerHTML += "document.implementation: " + document.implementation + "<br>";
+    out.innerHTML += "document.inputEncoding: " + document.inputEncoding + "<br>";
+    out.innerHTML += "document.readyState: " + document.readyState + "<br>";
+    out.innerHTML += "document.strictErrorChecking: " + document.strictErrorChecking + "<br>";
+   
+        }
+    </script>
+</body>
+</html>

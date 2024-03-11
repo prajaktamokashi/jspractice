@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finding HTML Elements</title>
+    <style>
+      .two {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Finding HTML Elements</h1>
+    <p id="one">This is a paragraph with ID.</p>
+    <p class="two">This is a paragraph with class.</p>
+    <div>This is a div.</div>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <button onclick="find()">Find Elements</button>
+
+    <script>
+      function find() {
+        // Finding elements by ID
+        var elementById = document.getElementById("one");
+        elementById.innerHTML += " Found by ID";
+
+        // Finding elements by class
+        var elementsByClass = document.getElementsByClassName("two");
+        //for (var i = 0; i < elementsByClass.length; i++) {
+          elementsByClass[i].innerHTML += " Found by Class";
+        //}
+
+        // Finding elements by tag name
+        var elementsByTag = document.getElementsByTagName("div");
+        //for (var i = 0; i < elementsByTag.length; i++) {
+          elementsByTag[i].innerHTML += " Found by Tag";
+        //}
+
+        // Finding elements by CSS selector
+        var elementBySelector = document.querySelector("li");
+        elementBySelector.innerHTML += " Found by CSS Selector";
+      }
+    </script>
+  </body>
+</html>
