@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing HTML Elements</title>
+    <style>
+        #div {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+            color:black;
+            font-size: 30px;
+        }
+        *{
+            background-color: blanchedalmond;
+        }
+    </style>
+</head>
+<body>
+    <h1>Changing HTML Elements</h1>
+    <div id="div">This is a div </div>
+    <br>
+    <button onclick="change()">Change Elements</button>
+
+    <script>Element
+        function change() {
+            // Changing innerHTML
+            document.getElementById("div").innerHTML = " New div after its content is changed ";
+
+            // Changing attribute
+            document.getElementById("div").setAttribute("style", "color: red; font-weight: bold;");
+            document.getElementById("div").setAttribute("style", "height: 400px;");
+
+            // Changing style property
+            document.getElementById("div").style.backgroundColor = "yellow";
+            document.getElementById("div").style.fontSize = "25px";
+            document.getElementById("div").style.fontFamily = "sans-serif";
+            document.getElementById("div").style.width = "400px";
+            //document.getElementById("div").style.height = "250px";
+        }
+    </script>
+</body>
+</html>
