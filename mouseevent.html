@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mouse Events and Text Manipulation</title>
+    <style>
+      * {
+        background-color: aquamarine;
+      }
+      #heading {
+        font-size: 40px;
+        color: black;
+      }
+      button {
+        margin-right: 10px;
+        margin-bottom: 30px;
+        height: 40px;
+        width: 150px;
+      }
+      #eventButton {
+        height: 50px;
+        width: 200px;
+        padding: 10px 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">Mouse Events and Text Manipulation Demo</h1>
+    <br />
+
+    <button id="hoverButton">Hover Effect</button><br />
+    <button id="uppercaseButton">Convert Text to Uppercase</button><br />
+    <button id="changeTextButton">Change Heading Text</button><br />
+    <button id="eventButton">Mouse Button</button><br />
+
+    <script>
+      document
+        .getElementById("hoverButton")
+        .addEventListener("mouseover", function () {
+          document.getElementById("heading").style.color = "blue";
+          document.getElementById("heading").style.fontWeight = "bold";
+        });
+
+      document
+        .getElementById("hoverButton")
+        .addEventListener("mouseout", function () {
+          document.getElementById("heading").style.color = "black";
+          document.getElementById("heading").style.fontWeight = "normal";
+        });
+
+      document
+        .getElementById("uppercaseButton")
+        .addEventListener("click", function () {
+          var headingText = document.getElementById("heading").innerText;
+          document.getElementById("heading").innerText =
+            headingText.toUpperCase();
+        });
+
+      document
+        .getElementById("changeTextButton")
+        .addEventListener("click", function () {
+          var newText = prompt("Enter new heading text:");
+
+          if (newText !== null) {
+            document.getElementById("heading").innerText = newText;
+          }
+        });
+
+      var eventButton = document.getElementById("eventButton");
+
+      eventButton.addEventListener("mousedown", function () {
+        eventButton.style.backgroundColor = "#6c757d";
+      });
+
+      eventButton.addEventListener("mouseup", function () {
+        eventButton.style.backgroundColor = "#007bff";
+      });
+
+      eventButton.addEventListener("mousemove", function () {
+        eventButton.style.backgroundColor = "#ffc107";
+      });
+    </script>
+  </body>
+</html>
