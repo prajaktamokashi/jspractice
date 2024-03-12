@@ -5,23 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Finding HTML Elements</title>
     <style>
+      * {
+        background-color: antiquewhite;
+      }
       .two {
         background-color: yellow;
+      }
+      #one {
+        background-color: blueviolet;
+        color: white;
+      }
+      #three {
+        font-size: 25px;
+        color: black;
+      }
+      ul {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        color: rgb(14, 14, 126);
       }
     </style>
   </head>
   <body>
-    <h1>Finding HTML Elements</h1>
+    <h1>Finding ,Changing,Adding and Deleting HTML Elements</h1>
     <p id="one">This is a paragraph with ID.</p>
     <p class="two">This is a paragraph with class.</p>
+    <p class="two">This is another paragraph with class.</p>
     <div>This is a div.</div>
-    <ul>
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
+    <p id="three">Fruit List:</p>
+    <ul style="list-style-type: circle" id="fruitList">
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Grapes</li>
+      <li>Orange</li>
+      <li>Kiwi</li>
     </ul>
 
     <button onclick="find()">Find Elements</button>
+    <button onclick="change()">Change Elements</button>
+    <button onclick="modify()">Modify Elements</button>
 
     <script>
       function find() {
@@ -31,19 +53,48 @@
 
         // Finding elements by class
         var elementsByClass = document.getElementsByClassName("two");
-        //for (var i = 0; i < elementsByClass.length; i++) {
+        for (var i = 0; i < elementsByClass.length; i++) {
           elementsByClass[i].innerHTML += " Found by Class";
-        //}
+        }
 
         // Finding elements by tag name
         var elementsByTag = document.getElementsByTagName("div");
-        //for (var i = 0; i < elementsByTag.length; i++) {
+        for (var i = 0; i < elementsByTag.length; i++) {
           elementsByTag[i].innerHTML += " Found by Tag";
-        //}
+        }
 
         // Finding elements by CSS selector
         var elementBySelector = document.querySelector("li");
         elementBySelector.innerHTML += " Found by CSS Selector";
+      }
+
+      function change() {
+        // Changing innerHTML
+        document.getElementById("one").innerHTML =
+          " New Paragraph after changing  ";
+        // Changing attribute
+        document
+          .getElementById("one")
+          .setAttribute("style", "color: black; font-weight: bold;");
+        // Changing style property
+        document.getElementById("three").style.backgroundColor = "pink";
+        document.getElementById("three").style.fontSize = "25px";
+        document.getElementById("three").style.fontFamily = "sans-serif";
+      }
+
+      function modify() {
+        var newListItem = document.createElement("li");
+        newListItem.textContent = "Watermelon";
+
+        var fruitList = document.getElementById("fruitList");
+
+        fruitList.appendChild(newListItem);
+        var firstListItem = fruitList.getElementsByTagName("li")[0];
+        fruitList.removeChild(firstListItem);
+        var secondListItem = fruitList.getElementsByTagName("li")[0];
+        var newSecondListItem = document.createElement("li");
+        newSecondListItem.textContent = "Pineapple";
+        fruitList.replaceChild(newSecondListItem, secondListItem);
       }
     </script>
   </body>

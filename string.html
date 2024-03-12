@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Methods Demo</title>
+    <style>
+      * {
+        background-color: rgb(245, 230, 100);
+        color: black;
+        font-size: 20px;
+      }
+      h1 {
+        font-size: 40px;
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>String Methods</h1>
+    <script>
+      var myString = "Hello, world!";
+
+      document.write("Length of the string: " + myString.length + "<br>");
+
+      document.write("Character at index 4: " + myString.charAt(4) + "<br>");
+
+      document.write(
+        "Character code at index 3: " + myString.charCodeAt(3) + "<br>"
+      );
+
+      document.write("Character at index 3 using []: " + myString[3] + "<br>");
+
+      document.write(
+        "Slice from index 6 to end: " + myString.slice(6) + "<br>"
+      );
+
+      document.write(
+        "Substring from index 2 to 9: " + myString.substring(2, 9) + "<br>"
+      );
+
+      document.write(
+        "Substring of length 5 from index 7: " + myString.substr(5, 7) + "<br>"
+      );
+
+      document.write("Index of 'world': " + myString.search("world") + "<br>");
+
+      var name = "Prajakta";
+      var age = 22;
+      document.write(`My name is ${name} and I am ${age} years old.<br>`);
+
+      document.write("Uppercase string: " + myString.toUpperCase() + "<br>");
+
+      document.write("Lowercase string: " + myString.toLowerCase() + "<br>");
+
+      var anotherString = " Have a nice day!";
+      document.write(
+        "Concatenated string: " + myString.concat(anotherString) + "<br>"
+      );
+
+      var stringWithWhitespace = "   Hello, world!   ";
+      document.write("Trimmed string: " + stringWithWhitespace.trim() + "<br>");
+
+      document.write(
+        "Trimmed start string: " + stringWithWhitespace.trimStart() + "<br>"
+      );
+      document.write(
+        "Trimmed end string: " + stringWithWhitespace.trimEnd() + "<br>"
+      );
+
+      var paddedString = "5";
+      document.write(
+        "Padded start string: " + paddedString.padStart(5, "0") + "<br>"
+      );
+
+      document.write(
+        "Padded end string: " + paddedString.padEnd(5, "0") + "<br>"
+      );
+
+      var repeatedString = "abc";
+      document.write("Repeated string: " + repeatedString.repeat(3) + "<br>");
+
+      var replacedString = myString.replace("world", "universe");
+      document.write("Replaced string: " + replacedString + "<br>");
+
+      var splitString = "apple, banana, orange,chickoo,pineapple";
+      var splitArray = splitString.split(",   ");
+      document.write("Split string: " + splitArray + "<br>");
+    </script>
+  </body>
+</html>

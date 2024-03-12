@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Features Demo</title>
+    <style>
+      * {
+        background-color: rgba(80, 219, 99, 0.705);
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        
+      var myString = "Hello, world!";
+
+      if (myString.startsWith("Hello")) {
+        document.write("The string starts with 'Hello'.<br>");
+      } else {
+        document.write("The string does not start with 'Hello'.<br>");
+      }
+
+      if (myString.endsWith("world!")) {
+        document.write("The string ends with 'world!'.<br>");
+      } else {
+        document.write("The string does not end with 'world!'.<br>");
+      }
+
+      var myArray = [1, 2, 3, 4, 5];
+
+      var newArray = Array.from(myArray, (x) => x * 2);
+      document.write(
+        "New array created from original array: " + newArray + "<br>"
+      );
+
+      var arrayKeys = Array.from(myArray.keys());
+      document.write("Keys of the array: " + arrayKeys + "<br>");
+
+      var foundElement = myArray.find((element) => element > 2);
+      document.write("First element greater than 2: " + foundElement + "<br>");
+
+      var foundIndex = myArray.findIndex((element) => element > 4);
+      document.write(
+        "Index of the first element greater than 3: " + foundIndex + "<br>"
+      );
+    </script>
+  </body>
+</html>
