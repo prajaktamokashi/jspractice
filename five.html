@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skipping Number 5</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h2>Skipping Number 5</h2>
+  <p id="result"></p>
+
+  <script>
+    var result = document.getElementById("result");
+    var output ='';
+
+    for (var i = 1; i <= 10; i++) {
+      if (i === 5) {
+        continue; 
+      }
+      output = output + i +'<br>' ;
+    }
+
+    result.innerText = "Numbers from 1 to 10 excluding 5: " + output; 
+  </script>
+</body>
+</html>
