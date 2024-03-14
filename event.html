@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        background-color: aliceblue;
+    }
+    h3{
+        font-size: 40px;
+        color: brown;
+    }
+        button
+        {height: 40px;
+        width:250px;
+         background-color: bisque;
+         color:black;
+         font-size: 20px;
+        }
+        #result{
+            font-size: 30px;
+
+        }
+</style>
+</head>
+<body>
+    <h3>Click "Remove" to remove the event</h3>
+    <p id="result"></p>
+    <button onclick="remove()">Remove</button>
+    <button onclick="changeColor()">Change color of heading</button>
+    <button onclick="displayDate()">display date</button>
+    <script>
+        document.addEventListener("mousemove",mathRandom);
+        document.getElementById("result").addEventListener("click", displayDate);
+     function remove(){
+        document.removeEventListener("mousemove",mathRandom);
+
+     }
+     function mathRandom(){
+        document.getElementById("result").innerHTML= Math.random();
+     }
+     function changeColor(){
+        let color=document.getElementsByTagName("h3")[0];
+        color.style.color="blue";
+
+     }
+     function displayDate(){
+        document.getElementById("result").innerHTML = Date();
+    }
+     
+
+     
+    </script>
+</body>
+</html>
