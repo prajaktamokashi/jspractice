@@ -48,23 +48,23 @@
     <script>
       function find() {
         // Finding elements by ID
-        var elementById = document.getElementById("one");
+        let elementById = document.getElementById("one");
         elementById.innerHTML += " Found by ID";
 
         // Finding elements by class
-        var elementsByClass = document.getElementsByClassName("two");
-        for (var i = 0; i < elementsByClass.length; i++) {
+        let elementsByClass = document.getElementsByClassName("two");
+        for (let i = 0; i < elementsByClass.length; i++) {
           elementsByClass[i].innerHTML += " Found by Class";
         }
 
         // Finding elements by tag name
-        var elementsByTag = document.getElementsByTagName("div");
-        for (var i = 0; i < elementsByTag.length; i++) {
+        let elementsByTag = document.getElementsByTagName("div");
+        for (let i = 0; i < elementsByTag.length; i++) {
           elementsByTag[i].innerHTML += " Found by Tag";
         }
 
         // Finding elements by CSS selector
-        var elementBySelector = document.querySelector("li");
+        let elementBySelector = document.querySelector("li");
         elementBySelector.innerHTML += " Found by CSS Selector";
       }
 
@@ -83,16 +83,16 @@
       }
 
       function modify() {
-        var newListItem = document.createElement("li");
+        let newListItem = document.createElement("li");
         newListItem.textContent = "Watermelon";
 
-        var fruitList = document.getElementById("fruitList");
+        let fruitList = document.getElementById("fruitList");
 
         fruitList.appendChild(newListItem);
-        var firstListItem = fruitList.getElementsByTagName("li")[0];
+        let firstListItem = fruitList.getElementsByTagName("li")[0];
         fruitList.removeChild(firstListItem);
-        var secondListItem = fruitList.getElementsByTagName("li")[0];
-        var newSecondListItem = document.createElement("li");
+        let secondListItem = fruitList.getElementsByTagName("li")[0];
+        let newSecondListItem = document.createElement("li");
         newSecondListItem.textContent = "Pineapple";
         fruitList.replaceChild(newSecondListItem, secondListItem);
       }

@@ -8,12 +8,12 @@
 <body>
     <p id="result"></p>
     <script>
-        var student={
+        let student={
             name:'Prajakta',
             age:22
         };
-        var output=' ';
-        for (var properties in student){
+        let output=' ';
+        for (let properties in student){
             output= output + properties + ': ' + student[properties]+ '<br>';
         }
         document.getElementById('result').innerHTML = output;

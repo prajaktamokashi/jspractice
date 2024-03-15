@@ -31,7 +31,7 @@
     <div id="output1">Output:</div>
 
     <script>
-      var globalVar = "I am global"; //this is my global variable
+      let globalVar = "I am global"; //this is my global variable
       //block scope
       {
         // Accessing global scope variable
@@ -46,13 +46,13 @@
       //function scope
       function functionScope() {
         // Function scope variable
-        var functionVar = "I am function scoped";
+        let functionVar = "I am function scoped";
         document.getElementById("output1").innerText += "\n" + functionVar;
 
         // Inner function
         function innerFunction() {
           //inner function variable
-          var innerVar = "I am inner function scoped";
+          let innerVar = "I am inner function scoped";
           document.getElementById("output1").innerText += "\n" + innerVar;
         }
         // Attempting to access innerVar here

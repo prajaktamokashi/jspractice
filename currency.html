@@ -16,10 +16,10 @@
 
     <script>
         function convert() {
-            var usdAmount = document.getElementById('usdAmount').value;
-            var inrRate = 82.74;
+            let usdAmount = document.getElementById('usdAmount').value;
+            let inrRate = 82.74;
 
-            var inrAmount = usdAmount * inrRate;
+            let inrAmount = usdAmount * inrRate;
 
             document.getElementById('result').innerHTML = `${usdAmount} USD = ${inrAmount} INR`;
         }
