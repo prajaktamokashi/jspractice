@@ -22,16 +22,16 @@
     <script>
       function Pyramid() {
 
-        var Count = parseInt(document.getElementById("Count").value);
+        let Count = parseInt(document.getElementById("Count").value);
 
-        for (var i = 0; i < Count; i++) {
-          var row = "";
+        for (let i = 0; i < Count; i++) {
+          let row = "";
 
-          for (var j = 0; j < Count - i - 1; j++) {
+          for (let j = 0; j < Count - i - 1; j++) {
             row += " ";
           }
 
-          for (var k = 0; k < 2 * i + 1; k++) {
+          for (let k = 0; k < 2 * i + 1; k++) {
             row += "*";
           }
 

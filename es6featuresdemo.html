@@ -14,7 +14,7 @@
   <body>
     <script>
         
-      var myString = "Hello, world!";
+      let myString = "Hello, world!";
 
       if (myString.startsWith("Hello")) {
         document.write("The string starts with 'Hello'.<br>");
@@ -28,20 +28,20 @@
         document.write("The string does not end with 'world!'.<br>");
       }
 
-      var myArray = [1, 2, 3, 4, 5];
+      let myArray = [1, 2, 3, 4, 5];
 
-      var newArray = Array.from(myArray, (x) => x * 2);
+      let newArray = Array.from(myArray, (x) => x * 2);
       document.write(
         "New array created from original array: " + newArray + "<br>"
       );
 
-      var arrayKeys = Array.from(myArray.keys());
+      let arrayKeys = Array.from(myArray.keys());
       document.write("Keys of the array: " + arrayKeys + "<br>");
 
-      var foundElement = myArray.find((element) => element > 2);
+      let foundElement = myArray.find((element) => element > 2);
       document.write("First element greater than 2: " + foundElement + "<br>");
 
-      var foundIndex = myArray.findIndex((element) => element > 4);
+      let foundIndex = myArray.findIndex((element) => element > 4);
       document.write(
         "Index of the first element greater than 3: " + foundIndex + "<br>"
       );
