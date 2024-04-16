@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Displaying Selected Option</h1>
+    <select id="select" onchange="display()">
+        <option value="Apple">Apple</option>
+        <option value="Banana">Banana</option>
+        <option value="Kiwi">Kiwi</option>
+        <option value="Papaya">Papaya</option>
+        <option value="Pineapple">Pineapple</option>
+        
+
+        </select>
+        <p id="result"></p>
+    
+    <script>
+        function display(){
+        let fruit=document.getElementById("select");
+        let selectedFruit=fruit.options[fruit.selectedIndex].text;
+        document.getElementById("result").innerText="Selected Fruit is:"+selectedFruit;
+        }
+    </script>
+</body>
+</html>

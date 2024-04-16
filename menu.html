@@ -31,12 +31,12 @@
 
     <script>
         function Prime() {
-            var number = parseInt(prompt('Enter a number:'));
-            var isPrime = true;
+            let number = parseInt(prompt('Enter a number:'));
+            let isPrime = true;
             if (number <= 1) {
                 isPrime = false;
             } else {
-                for (var i = 2; i <= Math.sqrt(number); i++) {
+                for (let i = 2; i <= Math.sqrt(number); i++) {
                     if (number % i === 0) {
                         isPrime = false;
                         break;
@@ -47,7 +47,7 @@
         }
 
         function Number() {
-            var number = parseFloat(prompt('Enter a number:'));
+            let number = parseFloat(prompt('Enter a number:'));
             if (number > 0) {
                 document.getElementById('output').innerHTML = number + ' is a positive number.';
             } else if (number < 0) {

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-      var num, num1, num2, sum;
+      let num, num1, num2, sum;
 
       function add() {
         num1 = parseInt(document.getElementById("first").value);
@@ -33,12 +33,12 @@
       }
       function star()
       {
-        var x,y;
+        let x,y;
         for(x=1;x<=10;x=x=x+1)
         {
             for(y=10;y>=x;y=y-1)
             {
-                document.write("@");
+                document.write("*");
             }
             document.write("<br/>")
         }

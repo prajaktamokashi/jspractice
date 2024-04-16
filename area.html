@@ -41,52 +41,52 @@
     <p id="result"></p>
     <script>
       function Circle() {
-        var radius = parseFloat(prompt("Enter the radius of the circle:"));
-        var area = 3.142 * radius * radius;
+        let radius = parseFloat(prompt("Enter the radius of the circle:"));
+        let area = 3.142 * radius * radius;
         displayResult(area);
       }
 
       function Triangle() {
-        var base = parseFloat(prompt("Enter the base of the triangle:"));
-        var height = parseFloat(prompt("Enter the height of the triangle:"));
-        var area = 0.5 * base * height;
+        let base = parseFloat(prompt("Enter the base of the triangle:"));
+        let height = parseFloat(prompt("Enter the height of the triangle:"));
+        let area = 0.5 * base * height;
         displayResult(area);
       }
 
       function Square() {
-        var side = parseFloat(
+        let side = parseFloat(
           prompt("Enter the length of the side of the square:")
         );
-        var area = side * side;
+        let area = side * side;
         displayResult(area);
       }
 
       function Rectangle() {
-        var length = parseFloat(prompt("Enter the length of the rectangle:"));
-        var bredth = parseFloat(prompt("Enter the bredth of the rectangle:"));
-        var area = length * bredth;
+        let length = parseFloat(prompt("Enter the length of the rectangle:"));
+        let bredth = parseFloat(prompt("Enter the bredth of the rectangle:"));
+        let area = length * bredth;
         displayResult(area);
       }
       function equiTriangle() {
-        var side1 = parseFloat(prompt("Enter the side of the equilateral triangle:"));
-        var area = 0.433 * side1 * side1;
+        let side1 = parseFloat(prompt("Enter the side of the equilateral triangle:"));
+        let area = 0.433 * side1 * side1;
         displayResult(area);
       }
       function Parallelogram() {
-        var base = parseFloat(prompt("Enter the base of the Parallelogram :"));
-        var height = parseFloat(prompt("Enter the height of the Parallelogram:"));
-        var area = base * height;
+        let base = parseFloat(prompt("Enter the base of the Parallelogram :"));
+        let height = parseFloat(prompt("Enter the height of the Parallelogram:"));
+        let area = base * height;
         displayResult(area);
       }
       function Rhombus() {
-        var d1 = parseFloat(prompt("Enter the first diagonal of rhombus:"));
-        var d2 = parseFloat(prompt("Enter the second diagonal of rhombus:"));
-        var area = 0.5 * d1 * d2;
+        let d1 = parseFloat(prompt("Enter the first diagonal of rhombus:"));
+        let d2 = parseFloat(prompt("Enter the second diagonal of rhombus:"));
+        let area = 0.5 * d1 * d2;
         displayResult(area);
       }
 
       function displayResult(area) {
-        var output = document.getElementById("result");
+        let output = document.getElementById("result");
         result.innerHTML = "The area is: " + area;
       }
     </script>

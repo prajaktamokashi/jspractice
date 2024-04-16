@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traffic Signal</title>
+    <style>
+      .signal {
+        width: 300px;
+        height: 500px;
+        border: 2px solid black;
+        border-radius: 40px;
+        background-color: #333;
+        margin: 20px auto;
+      }
+
+      .light {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin: 10px auto;
+      }
+      .red {
+        background-color: red;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .green {
+        background-color: green;
+      }
+      button{
+        height: 50px;
+        width: 200px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <div class="signal">
+      <div class="light red"></div>
+      <div class="light yellow"></div>
+      <div class="light green"></div>
+    </div>
+    <button onclick="signal()">Change</button>
+    <script>
+        let signal=document.getElementById("signal");
+     function signal(){
+      let redColor=document.getElementsByClassName("light red");
+      redColor.style.backgroundColor="yellow";
+     }
+    </script>
+  </body>
+</html>

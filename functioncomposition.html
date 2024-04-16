@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Function Composition</title>
+</head>
+<body>
+
+<script>
+  function composeFunctions(functions) {
+    return function(x) {
+      return functions.reduceRight((acc, fn) => fn(acc), x);
+    };
+  }
+  var f1 = function(x) { return x * 2; };
+  var f2 = function(x) { return x + 3; };
+  var f3 = function(x) { return x - 1; };
+
+  var composedFunction = composeFunctions([f1, f2, f3]);
+  var result = composedFunction(5);
+  document.write("Result: " + result);
+</script>
+
+</body>
+</html>

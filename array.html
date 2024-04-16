@@ -5,49 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Array Methods Demo</title>
     <style>
-        *{
-            background-color: aliceblue;
-            color:black;
-            font-size: 20px;
-        }
-        h1{
-            font-size: 40px;
-            color:grey;
-        }
+      * {
+        background-color: rgb(245, 230, 100);
+        color: black;
+        font-size: 20px;
+      }
+      h1 {
+        font-size: 40px;
+        color: brown;
+      }
     </style>
   </head>
   <body>
-    <h1>Array Methods Demo</h1>
+    <h1>Array Methods</h1>
     <script>
-      var myArray = [1, 2, 3, 4, 5];
+      
+      let arr = [1, 2, 3, 4, 5];
 
-      document.write("Array length: " + myArray.length + "<br>");
+      document.write("Array length: " + arr.length + "<br>");
 
-      document.write("Array as string: " + myArray.toString() + "<br>");
+      document.write("Array as string: " + arr.toString() + "<br>");
 
-      document.write("Element at index 2: " + myArray[2] + "<br>");
+      document.write("Element at index 2: " + arr[2] + "<br>");
 
-      document.write("Array joined with '-': " + myArray.join("-") + "<br>");
+      document.write("Array joined: " + arr.join(", ") + "<br>");
 
-      var poppedElement = myArray.pop();
+      let poppedElement = arr.pop();
       document.write("Popped element: " + poppedElement + "<br>");
+      document.write("Array after pop: " + arr + "<br>");
 
-      myArray.push(6);
-      document.write("Array after push: " + myArray + "<br>");
+      arr.push(6);
+      document.write("Array after push: " + arr + "<br>");
 
-      var shiftedElement = myArray.shift();
+      let shiftedElement = arr.shift();
       document.write("Shifted element: " + shiftedElement + "<br>");
+      document.write("Array after shift: " + arr + "<br>");
 
-      myArray.unshift(0);
-      document.write("Array after unshift: " + myArray + "<br>");
+      arr.unshift(0);
+      document.write("Array after unshift: " + arr + "<br>");
 
-      delete myArray[1];
-      document.write("Array after delete: " + myArray + "<br>");
+      delete arr[2];
+      document.write("Array after delete: " + arr + "<br>");
 
-      var newArray = myArray.concat([7, 8, 9]);
-      document.write("Concatenated array: " + newArray + "<br>");
+      let newArr = arr.concat([7, 8, 9]);
+      document.write("Concatenated array: " + newArr + "<br>");
 
-      var slicedArray = myArray.slice(1, 3);
+      newArr.copyWithin(0, 3);
+      document.write("Array after copyWithin: " + newArr + "<br>");
+
+      let nestedArray = [1, [2, 3], [4, [5, 6]]];
+      document.write("Flattened array: " + nestedArray.flat() + "<br>");
+//add new items to array 2=at what inex to add 0=how many ele to remove
+      newArr.splice(2, 0, "a", "b");
+      document.write("Array after splice: " + newArr + "<br>");
+//created a new array after splice so that older array remains uncghanged
+      let splicedItems = newArr.splice(2, 2);
+      document.write("Spliced items: " + splicedItems + "<br>");
+      document.write("Array after toSpliced: " + newArr + "<br>");
+//cut array from index 1 till 4th index
+      let slicedArray = newArr.slice(1, 4);
       document.write("Sliced array: " + slicedArray + "<br>");
     </script>
   </body>

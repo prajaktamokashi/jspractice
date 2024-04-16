@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promise Sum</title>
+</head>
+<body>
+  <script>
+    const promise1 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(5);
+      }, 1000);
+    });
+    const promise2 = new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(7);
+      }, 2000);
+    });
+    const sumPromise = Promise.all([promise1, promise2]).then(values => {
+      const sum = values.reduce((acc, curr) => acc + curr, 0);
+      return sum;
+    });
+    sumPromise.then(sum => {
+      document.write("The sum of the two numbers is: " + sum);
+    });
+  </script>
+</body>
+</html>

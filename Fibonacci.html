@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fibonacci Sequence Generator</title>
+</head>
+<body>
+
+<script>
+  // Generator function for Fibonacci sequence
+  function* fibonacciGenerator() {
+    let prev = 0;
+    let current = 1;
+    
+    while (true) {
+      yield prev;
+      [prev, current] = [current, prev + current];
+    }
+  }
+
+  // Create a Fibonacci sequence generator
+  const fibonacci = fibonacciGenerator();
+
+ document.write("Fibonacci Series:<br>")
+  for (let i = 0; i < 15; i++) {
+    document.write( fibonacci.next().value + " <br>");
+  }
+</script>
+
+</body>
+</html>

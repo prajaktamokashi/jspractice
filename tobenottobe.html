@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testing with Expect</title>
+</head>
+<body>
+  <script>
+    // Function to create the expect object
+    function expect(val) {
+      return {
+        toBe: function(expected) {
+          if (val !== expected) {
+            throw new Error("Not Equal");
+          }
+          return true;
+        },
+        notToBe: function(expected) {
+          if (val === expected) {
+            throw new Error("Equal");
+          }
+          return true;
+        }
+      };
+    }
+
+    // Example usage
+    try {
+      // Test case 1
+      expect(5).toBe(5); // No error, as 5 === 5
+      // expect(5).toBe(6); // Error: Not Equal
+      // expect(5).notToBe(5); // Error: Equal
+      // expect(5).notToBe(6); // No error, as 5 !== 6
+      
+      // Test case 2
+      expect("Hello").toBe("Hello"); // No error, as "Hello" === "Hello"
+      // expect("Hello").toBe("World"); // Error: Not Equal
+      // expect("Hello").notToBe("Hello"); // Error: Equal
+      // expect("Hello").notToBe("World"); // No error, as "Hello" !== "World"
+    } catch (error) {
+      document.write("Error: " + error.message);
+    }
+  </script>
+</body>
+</html>
