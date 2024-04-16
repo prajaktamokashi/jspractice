@@ -1,28 +1,63 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USD to INR Converter</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currency Converter</title>
+<style>
+    *{
+        background-color: rgb(234, 191, 255);
+        color:black;
+        font-size: 18px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    #result{
+      font-size: 25px;
+      color:rgb(60, 60, 61);
+      font-weight: 800;
+    }
+</style>
 </head>
 <body>
-    <h2>USD to INR Converter</h2>
-    <label for="usdAmount">Amount in USD:</label>
-    <input type="number" id="usdAmount" placeholder="Enter amount">
-    <br>
-    <button onclick="convert()">Convert</button>
-    <div id="result"></div>
+  <h1>Currency Converter</h1>
+  <label for="amount">Enter amount in INR:</label>
+  <input type="number" id="amount">
+  <select id="currency">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="GBP">GBP</option>
+    <option value="JPY">JPY</option>
+    <option value="AUD">AUD</option>
+  </select>
+  <button onclick="convertCurrency()">Convert</button>
+  <p id="result"></p>
 
-    <script>
-        function convert() {
-            let usdAmount = document.getElementById('usdAmount').value;
-            let inrRate = 82.74;
-
-            let inrAmount = usdAmount * inrRate;
-
-            document.getElementById('result').innerHTML = `${usdAmount} USD = ${inrAmount} INR`;
-        }
-    </script>
+  <script>
+    function convertCurrency() {
+      const amount = parseFloat(document.getElementById('amount').value);
+      const currency = document.getElementById('currency').value;
+      const conversionRates = {
+        USD: 0.013, // Replace with actual conversion rates
+        EUR: 0.012, // Replace with actual conversion rates
+        GBP: 0.010, // Replace with actual conversion rates
+        JPY: 1.42,  // Replace with actual conversion rates
+        AUD: 0.018  // Replace with actual conversion rates
+      };
+      
+      if (isNaN(amount)) {
+        alert('Please enter a valid number for amount.');
+        return;
+      }
+      
+      
+      const convertedAmount = amount * conversionRates[currency];
+      document.getElementById('result').innerText = `${amount} INR is equal to ${convertedAmount} ${currency}`;
+    }
+  </script>
 </body>
 </html>
+

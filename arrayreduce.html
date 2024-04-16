@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reducer Function Example</title>
+</head>
+<body>
+
+<p id="output">Result: </p>
+
+<script>
+  
+  function Reduce(nums, fn, init) {
+    var result = init;
+
+    for (var i = 0; i < nums.length; i++) {
+      result = fn(result, nums[i]);
+    }
+
+    return result;
+  }
+
+  var nums = [1,2,3,4,5,6,7,8,9,10];
+  var reducerFn = function(acc, currentValue) {
+    return acc + currentValue;
+  };
+  var initialValue = 0;
+
+  var finalResult = Reduce(nums, reducerFn, initialValue);
+
+  document.getElementById("output").textContent += finalResult;
+</script>
+
+</body>
+</html>

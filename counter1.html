@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+  </head>
+  <body>
+    <button onclick="Counter()"> Counter</button>
+    <p id="counterDisplay"></p>
+
+    <script>
+      function createCounter(initialValue) {
+        let counter = initialValue;
+
+        return function () {
+          return counter++;
+        };
+      }
+
+      const counterFunction = createCounter(0);
+
+      function Counter() {
+        const counterDisplay = document.getElementById("counterDisplay");
+        counterDisplay.textContent = counterFunction();
+      }
+    </script>
+  </body>
+</html>

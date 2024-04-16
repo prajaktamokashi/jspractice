@@ -1,0 +1,10 @@
+function createHelloWorld() {
+  return function() {
+    return "Hello World";
+  };
+}
+
+// Example usage:
+const helloFunction = createHelloWorld();
+const message = helloFunction(); // Returns "Hello World"
+alert(message); // Display "Hello World"

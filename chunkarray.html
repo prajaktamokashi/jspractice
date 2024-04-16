@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chunk Array</title>
+</head>
+<body>
+  <script>
+    function chunkArray(arr, size) {
+      const chunkedArray = [];
+      let index = 0;
+
+      while (index < arr.length) {
+        chunkedArray.push(arr.slice(index, index + size));
+        index += size;
+      }
+
+      return chunkedArray;
+    }
+    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const size = 2;
+    const chunked = chunkArray(arr, size);
+    document.write("Original Array: " + JSON.stringify(arr) + "<br>");
+    document.write("Chunked Array: " + JSON.stringify(chunked));
+  </script>
+</body>
+</html>
