@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transpose of Matrix</title>
+<style>
+    *{
+        background-color:antiquewhite;
+         font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  function transpose(matrix) {
+    const numRows = matrix.length;
+    const numCols = matrix[0].length;
+    const tMatrix = [];
+
+    for (let j = 0; j < numCols; j++) {
+      tMatrix[j] = [];
+      for (let i = 0; i < numRows; i++) {
+        tMatrix[j][i] = matrix[i][j];
+      }
+    }
+
+    return tMatrix;
+  }
+
+  const Matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+  ];
+
+  const transposed = transpose(Matrix);
+  document.write("Transposed Matrix: " + JSON.stringify(transposed));
+</script>
+
+</body>
+</html>

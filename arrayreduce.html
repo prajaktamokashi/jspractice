@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reducer Function Example</title>
+<style>
+  *{
+      background-color:antiquewhite;
+       font-size: 30px;
+  }
+</style>
 </head>
 <body>
 
@@ -27,9 +33,9 @@
   };
   var initialValue = 0;
 
-  var finalResult = Reduce(nums, reducerFn, initialValue);
+  var Result = Reduce(nums, reducerFn, initialValue);
 
-  document.getElementById("output").textContent += finalResult;
+  document.getElementById("output").textContent += Result;
 </script>
 
 </body>

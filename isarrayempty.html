@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Check if Array is Empty</title>
+<style>
+*{
+    background-color:antiquewhite;
+     font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<script>
+  function Empty(arr) {
+    return arr.length === 0;
+  }
+  const Array = JSON.parse("[]"); 
+  const isEmpty = Empty(Array);
+  document.write("Is array empty?<br> " + isEmpty);
+</script>
+
+</body>
+</html>

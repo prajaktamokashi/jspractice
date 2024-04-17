@@ -4,12 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Array Filtering</title>
+<style>
+  *{
+      background-color:antiquewhite;
+       font-size: 30px;
+  }
+</style>
 </head>
 <body>
 
 <script>
-  // Function to filter array without using Array.filter method
-  function customFilter(arr, fn) {
+  function Filter(arr, fn) {
     var filteredArr = [];
 
     for (var i = 0; i < arr.length; i++) {
@@ -17,21 +22,13 @@
         filteredArr.push(arr[i]);
       }
     }
-
     return filteredArr;
   }
-
-  // Example usage
   var arr = [1, 2, 3, 4, 5];
-
-  // Filtering function to filter even numbers
-  function isEven(element, index) {
+  function Even(element, index) {
     return element % 2 === 0;
   }
-
-  var filteredArr = customFilter(arr, isEven);
-
-  // Displaying filtered array using document.write
+  var filteredArr = Filter(arr, Even);
   document.write("Filtered Array: " + JSON.stringify(filteredArr));
 </script>
 
