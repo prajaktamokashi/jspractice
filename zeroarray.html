@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Move Zeroes to End</title>
+<style>
+    *{
+        background-color:antiquewhite;
+         font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  function move(nums) {
+    let nonZeroIndex = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+      if (nums[i] !== 0) {
+        nums[nonZeroIndex++] = nums[i];
+      }
+    }
+
+    for (let i = 0; i < nums.length; i++) {
+      nums[i] = 0;
+    }
+
+    return nums;
+  }
+
+  const nums = [0, 1, 0, 3, 12]; 
+  const result = move(nums);
+
+  document.write("Original Array: " + nums.join(", ") + "<br>");
+  document.write("Array after moving zeroes to end: " + result.join(", "));
+</script>
+
+</body>
+</html>

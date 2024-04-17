@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sort Array by Function Output</title>
+<style>
+    *{
+        background-color:antiquewhite;
+         font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  function sort(arr, fn) {
+    return arr.sort((a, b) => fn(a) - fn(b));
+  }
+  const arr = [3, 1, 2,45,66,89,12,45,33,0,5];
+  function fn(num) {
+    return num * 2;
+  }
+  const Arr = sort(arr, fn);
+  document.write("Sorted Array: " + " [ "+ Arr.join(" , ") +" ] ");
+</script>
+
+</body>
+</html>

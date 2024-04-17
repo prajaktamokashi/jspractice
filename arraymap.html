@@ -4,33 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Array Mapping</title>
+<style>
+  *{
+      background-color:antiquewhite;
+       font-size: 30px;
+  }
+</style>
 </head>
 <body>
-
-<script>
-  // Function to map array elements without using Array.map method
-  function customMap(arr, fn) {
-    var mappedArray = [];
+  <script>
+  function Map(arr, fn) {
+    var Array = [];
 
     for (var i = 0; i < arr.length; i++) {
-      mappedArray.push(fn(arr[i], i));
+      Array.push(fn(arr[i], i));
     }
 
-    return mappedArray;
+    return Array;
   }
-
-  // Example usage
   var arr = [1, 2, 3, 4, 5];
-
-  // Mapping function to double each element
-  function doubleElement(element, index) {
+  function double(element, index) {
     return element * 2;
   }
-
-  var mappedArray = customMap(arr, doubleElement);
-
-  // Displaying mapped array using document.write
-  document.write("Mapped Array: " + JSON.stringify(mappedArray));
+var Array = Map(arr, double);
+  document.write(" Mapped Array: " + JSON.stringify(Array));
 </script>
 
 </body>
